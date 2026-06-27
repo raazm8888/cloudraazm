@@ -128,6 +128,10 @@ android {
             "\"" + (System.getenv("SIMKL_CLIENT_SECRET") ?: localProperties["simkl.secret"]) + "\""
         )
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+      ndk  {
+
+            abifilters += setOf("armeabi-v7a")
+}
     }
 
     buildTypes {
